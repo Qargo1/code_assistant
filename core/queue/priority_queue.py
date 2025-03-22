@@ -59,6 +59,13 @@ class PriorityAnalysisQueue:
         for job in failed_queue.get_jobs():
             failed_queue.requeue(job.id)
             self.logger.warning(f"Restarted failed job: {job.id}")
+            
+    def add_refactor_task(self, file_path):
+        self.add_task(file_path, {
+            'type': 'refactor',
+            'priority': 'high',
+            'callback': self._handle_refactor_result
+        })
         
             
 class AnalysisWorker:

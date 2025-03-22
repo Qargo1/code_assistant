@@ -31,4 +31,15 @@ torch
 transformers
 python-memcached
 GitPython
-
+libcst
+radon
+networkx
+spacy
+python-igraph
+langchain 
+openai 
+google
+docker 
+javalang 
+anytree 
+tree-sitter

@@ -1,0 +1,12 @@
+// bridges/protos/database.proto
+service DatabaseService {
+    rpc ExecuteQuery (QueryRequest) returns (QueryResponse);
+}
+
+message QueryRequest {
+    string sql = 1;
+}
+
+message QueryResponse {
+    repeated bytes results = 1; // JSON-сериализованные данные
+}

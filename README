@@ -11,6 +11,8 @@ pytest tests/test_file_filter.py -v
 pytest tests/test_vector_search.py -v
 pytest tests/test_telegram_bot.py -v
 pytest tests/test_caching.py -v
+pytest tests/test_refactoring.py -v
+pytest tests/test_recommendations.py -v
 
 # Пример ожидаемого вывода:
 # test_basic_setup.py::test_config_file_exists PASSED
@@ -115,3 +117,50 @@ manager = GitManager('.')
 changes = manager.get_changed_files('HEAD~3..HEAD')
 print('Last changes:', changes)
 "
+
+# Пример запуска рефакторинга
+python -c "
+from core.refactor.code_analyzer import CodeRefactorer
+refactorer = CodeRefactorer()
+result = refactorer.analyze_file('src/auth.py')
+print('Suggestions:', result['suggestions'])
+print('Refactored code:', result['refactored'][:200])
+"
+
+python -m spacy download en_core_web_sm
+
+# Пример запуска анализа
+python -c "
+from core.recommendations.advisor import CodeAdvisor
+advisor = CodeAdvisor()
+print(advisor.generate_recommendations())
+"
+
+# Пример использования
+python -c "
+from core.integration.langchain_utils import CodeAssistantAgent
+agent = CodeAssistantAgent()
+print(agent.process_query('How to fix Python memory leaks?'))
+"
+
+# Собрать Java-сервис:
+cd bridges/java/SecureTerminal
+mvn clean package
+java -jar target/secure-terminal-1.0.jar
+
+# Запустить C#-сервис:
+cd bridges/csharp/DatabaseService
+dotnet run
+
+## Примеры использования:
+# Через Java-терминал
+user> terminal: git status
+bot> Изменения в файлах: ...
+
+# Через C#-БД
+user> query: SELECT * FROM Users
+bot> [{"id": 1, "name": "Alice"}, ...]
+
+# Через JS-скрапер
+user> scrape: https://example.com h1
+bot> ["Example Domain"]

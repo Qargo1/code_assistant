@@ -1,49 +1,67 @@
 import clr
 import os
 from pathlib import Path
+from typing import Dict, Any
+import logging
 
 class CSharpAnalyzer:
-    def __init__(self):
-        """Initialize C# analysis components using Roslyn."""
+    def __init__(self, roslyn_path: Path = None):
+        self.logger = logging.getLogger(self.__class__.__name__)
+        self._initialized = False
+        self._init_roslyn(roslyn_path)
+
+    def _init_roslyn(self, roslyn_path: Path):
+        """Инициализация Roslyn компонентов с обработкой ошибок"""
         try:
-            # Add Roslyn assemblies
-            roslyn_path = Path(__file__).parent / "lib" / "roslyn"
-            clr.AddReference(str(roslyn_path / "Microsoft.CodeAnalysis.dll"))
-            clr.AddReference(str(roslyn_path / "Microsoft.CodeAnalysis.CSharp.dll"))
+            if not roslyn_path:
+                roslyn_path = Path(__file__).parent / "lib" / "roslyn"
             
-            from Microsoft.CodeAnalysis.CSharp import CSharpSyntaxTree, LanguageVersion
-            from Microsoft.CodeAnalysis.CSharp.Syntax import CompilationUnitSyntax
+            required_assemblies = [
+                "Microsoft.CodeAnalysis.dll",
+                "Microsoft.CodeAnalysis.CSharp.dll"
+            ]
+            
+            for asm in required_assemblies:
+                clr.AddReference(str(roslyn_path / asm))
+            
+            from Microsoft.CodeAnalysis.CSharp import (
+                CSharpSyntaxTree, 
+                LanguageVersion
+            )
             
             self.syntax_tree = CSharpSyntaxTree
             self.language_version = LanguageVersion
             self._initialized = True
-            print("<self>CSharp analyzer initialized successfully</self>")
+            self.logger.info("C# analyzer initialized successfully")
+            
         except Exception as e:
-            self._initialized = False
-            print(f"<error>Failed to initialize C# analyzer: {str(e)}</error>")
-            print("<user>Please ensure Roslyn assemblies are present in bridges/lib/roslyn/</user>")
+            self.logger.error(f"Initialization failed: {str(e)}")
+            raise RuntimeError(
+                "Roslyn assemblies not found. "
+                f"Please check path: {roslyn_path}"
+            )
 
-    def analyze_file(self, file_path):
-        """Analyze a C# source file and return metrics."""
+    def analyze_file(self, file_path: Path) -> Dict[str, Any]:
+        """Анализ файла с валидацией пути"""
         if not self._initialized:
-            raise RuntimeError("C# analyzer not properly initialized")
+            raise RuntimeError("Analyzer not initialized")
+        
+        if not file_path.exists():
+            raise FileNotFoundError(f"C# file not found: {file_path}")
 
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 source = f.read()
 
-            # Parse the syntax tree
             tree = self.syntax_tree.ParseText(
                 source,
                 self.language_version.Latest
             ).GetRoot()
 
-            # Collect metrics
-            metrics = self._collect_metrics(tree)
-            print(f"<self>Analysis completed for {file_path}</self>")
-            return metrics
+            return self._collect_metrics(tree)
+            
         except Exception as e:
-            print(f"<error>Analysis failed for {file_path}: {str(e)}</error>")
+            self.logger.error(f"Analysis failed for {file_path}: {str(e)}")
             raise
 
     def _collect_metrics(self, tree):

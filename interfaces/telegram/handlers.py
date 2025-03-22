@@ -21,3 +21,13 @@ async def process_uploaded_file(update: Update):
     file = await update.message.document.get_file()
     await file.download_to_drive()
     await update.message.reply_text("📁 File received. Analyzing...")
+    
+async def handle_recommend(update: Update, context):
+    advisor = CodeAdvisor()
+    recommendations = advisor.generate_recommendations()
+    
+    response = "🔍 Code Recommendations:\n"
+    response += "\n🏛 Architectural:\n- " + "\n- ".join(recommendations['architectural'][:3])
+    response += "\n🔐 Security:\n- " + "\n- ".join(recommendations['security'][:3])
+    
+    await update.message.reply_markdown(response)

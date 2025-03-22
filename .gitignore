@@ -1,8 +1,15 @@
 __pycache__
 .venv
 .vscode
-data/storage
-data/data
+data
 tools/
 .cache
 logs
+obj/
+
+core/storage/qdrant_storage
+core/storage/vectordb
+
+*.pyc
+*.sqlite
+*.pdf

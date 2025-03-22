@@ -43,3 +43,12 @@ vcs:
     repo_path: "/path/to/repo"
     auto_commit: true
     poll_interval: 300  # 5 минут
+
+security:
+  allowed_commands:
+    - "git pull"
+    - "npm install"
+    - "ls"
+    - "pwd"
+  max_command_time: 30
+  require_confirmation: true

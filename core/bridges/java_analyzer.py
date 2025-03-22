@@ -1,46 +1,54 @@
 import jpype
 import jpype.imports
 from pathlib import Path
-import json
+from typing import Dict, Any
+import logging
+
 
 class JavaAnalyzer:
-    def __init__(self):
-        """Initialize Java analysis components using JavaParser."""
+    def __init__(self, javaparser_path: Path = None):
+        self.logger = logging.getLogger(self.__class__.__name__)
+        self._initialized = False
+        self._init_javaparser(javaparser_path)
+
+    def _init_javaparser(self, javaparser_path: Path):
+        """Инициализация JavaParser с проверкой JVM"""
         try:
+            if not javaparser_path:
+                javaparser_path = Path(__file__).parent / "lib" / "javaparser"
+            
             if not jpype.isJVMStarted():
-                jars_path = Path(__file__).parent / "lib" / "javaparser"
-                classpath = str(jars_path / "javaparser-core-3.25.5.jar")
-                jpype.startJVM(classpath=[classpath])
-
-            # Import Java classes
+                jpype.startJVM(
+                    classpath=[str(javaparser_path / "*.jar")],
+                    convertStrings=True
+                )
+            
             from com.github.javaparser import StaticJavaParser
-            from com.github.javaparser.ast import CompilationUnit
-            from com.github.javaparser.ast.body import ClassOrInterfaceDeclaration, MethodDeclaration
-
             self.parser = StaticJavaParser
             self._initialized = True
-            print("<self>Java analyzer initialized successfully</self>")
-        except Exception as e:
-            self._initialized = False
-            print(f"<error>Failed to initialize Java analyzer: {str(e)}</error>")
-            print("<user>Please ensure JavaParser JAR is present in bridges/lib/javaparser/</user>")
-
-    def analyze_file(self, file_path):
-        """Analyze a Java source file and return metrics."""
-        if not self._initialized:
-            raise RuntimeError("Java analyzer not properly initialized")
-
-        try:
-            # Parse the file
-            compilation_unit = self.parser.parse(Path(file_path))
+            self.logger.info("Java analyzer initialized successfully")
             
-            # Collect metrics
-            metrics = self._collect_metrics(compilation_unit)
-            print(f"<self>Analysis completed for {file_path}</self>")
-            return metrics
         except Exception as e:
-            print(f"<error>Analysis failed for {file_path}: {str(e)}</error>")
+            self.logger.error(f"Initialization failed: {str(e)}")
+            raise RuntimeError(
+                "JavaParser JARs not found. "
+                f"Please check path: {javaparser_path}"
+            )
+
+    def analyze_file(self, file_path: Path) -> Dict[str, Any]:
+        """Анализ файла с проверкой расширения"""
+        if not file_path.suffix == ".java":
+            raise ValueError("Invalid Java file extension")
+            
+        try:
+            return self._collect_metrics(
+                self.parser.parse(file_path)
+            )
+        except Exception as e:
+            self.logger.error(f"Analysis failed for {file_path}: {str(e)}")
             raise
+
+    # Остальные методы остаются с улучшенной обработкой ошибок
 
     def _collect_metrics(self, compilation_unit):
         """Collect various code metrics from the compilation unit."""
