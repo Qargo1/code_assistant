@@ -1,0 +1,117 @@
+# Установка зависимостей
+python -m venv venv
+source venv/bin/activate  # Для Windows: venv\Scripts\activate
+pip install -e .
+
+# Запуск тестов
+pytest tests/test_basic_setup.py -v
+pytest tests/test_database_models.py -v
+pytest tests/test_priority_queue.py -v
+pytest tests/test_file_filter.py -v
+pytest tests/test_vector_search.py -v
+pytest tests/test_telegram_bot.py -v
+pytest tests/test_caching.py -v
+
+# Пример ожидаемого вывода:
+# test_basic_setup.py::test_config_file_exists PASSED
+# test_basic_setup.py::test_config_structure PASSED
+# test_basic_setup.py::test_setup_dependencies PASSED
+
+# Настройте PostgreSQL:
+CREATE DATABASE code_knowledge;
+CREATE USER codebot WITH PASSWORD 'securepass';
+GRANT ALL PRIVILEGES ON DATABASE code_knowledge TO codebot;
+
+SELECT * FROM file_metadata;
+SELECT * FROM code_patterns;
+
+# Установите и запустите Redis:
+# Для Ubuntu
+sudo apt-get install redis-server
+redis-server --daemonize yes
+
+# Для Windows использовать WSL или Docker
+
+# Запустите воркер в отдельном терминале:
+rq worker high medium low --with-scheduler
+
+# Мониторинг очередей:
+# Просмотр очередей
+print("High priority jobs:", queue_system.high_priority.count)
+print("Medium priority jobs:", queue_system.medium_priority.count)
+print("Low priority jobs:", queue_system.low_priority.count)
+
+# Просмотр упавших задач
+failed_queue = get_failed_queue(queue_system.redis_conn)
+print("Failed jobs:", failed_queue.count)
+
+# Пример использования
+python -c "
+from core.analysis.filter import FileFilter
+filter = FileFilter()
+result = filter.check_relevance('src/auth.py', 'login system')
+print(result)
+"
+
+# Для экономии ресурсов используйте квантованную версию модели:
+model_name = "google/flan-t5-small"
+
+# Запуск Qdrant через Docker
+docker-compose up -d
+
+# Инициализация системы
+python -c "
+from core.vector_db.qdrant_connector import VectorSearchEngine
+engine = VectorSearchEngine()
+engine.init_embedder()
+engine.add_file('test.py', 'print("hello")', {'language': 'python'})
+print(engine.search_files('hello world'))
+"
+
+# Создайте .env файл
+echo "TELEGRAM_TOKEN=your_bot_token" > .env
+
+# Запустите бота
+python -m interfaces.telegram.bot_core
+
+# Запуск системы мониторинга
+docker-compose -f docker-compose.monitoring.yml up -d
+
+# Запуск метрик в основном приложении
+python -c "
+from monitoring.metrics import SystemMetrics
+metrics = SystemMetrics()
+metrics.start_metrics_server()
+metrics.update_system_metrics()
+"
+
+# Генерация тестового отчета
+python -c "
+from monitoring.reporter import ReportGenerator
+reporter = ReportGenerator()
+print(reporter.generate_daily_report({'jobs_processed': 100}))
+"
+
+# Пример использования
+python -c "
+from core.cache import LayeredCache, RedisCache, FileSystemCache
+cache = LayeredCache()
+cache.add_backend(RedisCache())
+cache.add_backend(FileSystemCache())
+cache.set('test_key', b'test_value')
+print(cache.get('test_key'))
+"
+
+# Инициализация в существующем репозитории
+python -c "
+from core.vcs import ChangeTracker
+tracker = ChangeTracker('/path/to/your/repo')
+"
+
+# Пример ручного запуска
+python -c "
+from core.vcs.git_integration import GitManager
+manager = GitManager('.')
+changes = manager.get_changed_files('HEAD~3..HEAD')
+print('Last changes:', changes)
+"

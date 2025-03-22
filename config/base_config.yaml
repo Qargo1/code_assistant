@@ -1,0 +1,45 @@
+# Базовые настройки приложения
+project:
+  name: "Code Analysis Assistant"
+  version: "0.1.0"
+  author: "Your Name"
+
+database:
+  postgres:
+    host: "localhost"
+    port: 5432
+    dbname: "code_knowledge"
+    user: "codebot"
+    password: "5787"
+
+logging:
+  level: "INFO"
+  file: "logs/app.log"
+  max_size: 1048576  # 1MB
+  backup_count: 3
+
+paths:
+  codebase: "data"
+  cache_dir: ".cache/analysis"
+
+vector_db:
+  qdrant:
+    host: "localhost"
+    port: 6333
+    api_key: ""
+    collection: "code_vectors"
+
+caching:
+  redis:
+    host: localhost
+    port: 6379
+    db: 1
+  filesystem:
+    path: .cache
+    ttl: 3600
+
+vcs:
+  git:
+    repo_path: "/path/to/repo"
+    auto_commit: true
+    poll_interval: 300  # 5 минут

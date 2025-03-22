@@ -1,6 +1,8 @@
 __pycache__
 .venv
 .vscode
-clean_code/
-qdrant_storage/
-vectordb/
+data/storage
+data/data
+tools/
+.cache
+logs

@@ -1,0 +1,6 @@
+{
+    "prompt": 
+        "Analyze if the code relates to {question}. Return JSON: {\"relevant\": boolean, \"confidence\": 0-1, \"keywords\": [str]}\n\n",
+        "Code snippet:\n{file_content}\n\n"
+        "Answer:"
+}
