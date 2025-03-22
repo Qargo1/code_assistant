@@ -1,6 +1,5 @@
 <a name="english-version"></a>
 
-```markdown
 # 🚀 Code Assistant: Intelligent Multi-Language Development Toolkit
 
 **AI-powered code analysis system** with LLM integration, semantic search, and cross-language refactoring support.  
@@ -142,13 +141,11 @@ MIT License | Full details in `LICENSE.md`
 
 <a name="русская-версия"></a>
 
-```markdown
 # 🚀 Code Assistant: Умный помощник для разработки с поддержкой мультиязычного анализа
-# Currently IN DEVELOPMENT
+# НА ДАННЫЙ МОМЕНТ В РАЗРАБОТКЕ
 
 **Интеллектуальная система для автоматизации разработки** с интеграцией LLM, семантическим поиском кода и кросс-языковым анализом.  
 ✨ Поддерживает: Python, C#, Java, JS | 🔍 Векторный поиск | 🤖 Telegram-бот | 📊 Мониторинг | 🔄 CI/CD пайплайны
-```
 
 ---
 
