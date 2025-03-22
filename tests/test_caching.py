@@ -1,6 +1,6 @@
 import pytest
 from pathlib import Path
-from core.cache import LayeredCache, FileSystemCache, RedisCache
+from core.storage.cache import LayeredCache, FileSystemCache, RedisCache
 
 def test_layered_cache():
     cache = LayeredCache()

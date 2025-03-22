@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import Mock
-from core.queue.priority_queue import PriorityAnalysisQueue
+from core.automation.priority_queue import PriorityAnalysisQueue
 import redis
 
 @pytest.fixture

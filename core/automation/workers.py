@@ -1,5 +1,5 @@
 from rq import Worker
-from core.queue.priority_queue import PriorityAnalysisQueue
+from core.automation.priority_queue import PriorityAnalysisQueue
 
 class AnalysisWorker(Worker):
     def __init__(self, queues=None, *args, **kwargs):

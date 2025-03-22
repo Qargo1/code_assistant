@@ -62,7 +62,7 @@ class ChangeTracker:
     @staticmethod
     def track_changes():
         """Обработчик изменений"""
-        from core.queue.priority_queue import PriorityAnalysisQueue
+        from core.automation.priority_queue import PriorityAnalysisQueue
         manager = GitManager('.')
         changed_files = manager.get_changed_files()
         

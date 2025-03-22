@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import Mock
-from core.vector_db.qdrant_connector import VectorSearchEngine
+from core.storage.vector_db_py.qdrant_connector import VectorSearchEngine
 import numpy as np
 
 @pytest.fixture

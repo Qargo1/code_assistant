@@ -1,6 +1,6 @@
 {
   "root": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant",
-  "timestamp": "2025-03-23T00:14:50.081325",
+  "timestamp": "2025-03-23T00:54:11.012937",
   "structure": [
     {
       "name": ".self",
@@ -49,136 +49,6 @@
       ]
     },
     {
-      "name": "bridges",
-      "type": "directory",
-      "size": 0,
-      "modified": "2025-03-23T00:09:01.794551",
-      "permissions": "777",
-      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges",
-      "children": [
-        {
-          "name": "csharp",
-          "type": "directory",
-          "size": 0,
-          "modified": "2025-03-23T00:05:08.949011",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\csharp",
-          "children": [
-            {
-              "name": "DatabaseService",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-23T00:08:02.731706",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\csharp\\DatabaseService",
-              "children": [
-                {
-                  "name": "DataService.cs",
-                  "type": "file",
-                  "size": 1160,
-                  "modified": "2025-03-23T00:08:07.148950",
-                  "permissions": "666",
-                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\csharp\\DatabaseService\\DataService.cs"
-                }
-              ]
-            },
-            {
-              "name": "WindowsIntegration",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-23T00:05:08.949011",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\csharp\\WindowsIntegration",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "java",
-          "type": "directory",
-          "size": 0,
-          "modified": "2025-03-23T00:06:34.387157",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\java",
-          "children": [
-            {
-              "name": "NetworkManager",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-23T00:05:28.301436",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\java\\NetworkManager",
-              "children": []
-            },
-            {
-              "name": "SecureTerminal",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-23T00:06:12.365198",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\java\\SecureTerminal",
-              "children": [
-                {
-                  "name": "SecureShell.java",
-                  "type": "file",
-                  "size": 1139,
-                  "modified": "2025-03-23T00:07:16.525565",
-                  "permissions": "666",
-                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\java\\SecureTerminal\\SecureShell.java"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "js",
-          "type": "directory",
-          "size": 0,
-          "modified": "2025-03-23T00:09:10.702009",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\js",
-          "children": [
-            {
-              "name": "WebScrapper",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-23T00:09:19.371342",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\js\\WebScrapper",
-              "children": [
-                {
-                  "name": "scrapper.js",
-                  "type": "file",
-                  "size": 799,
-                  "modified": "2025-03-23T00:09:23.897632",
-                  "permissions": "666",
-                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\js\\WebScrapper\\scrapper.js"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "protos",
-          "type": "directory",
-          "size": 0,
-          "modified": "2025-03-23T00:08:46.189750",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\protos",
-          "children": [
-            {
-              "name": "database.proto",
-              "type": "file",
-              "size": 289,
-              "modified": "2025-03-23T00:08:51.064743",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\bridges\\protos\\database.proto"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "config",
       "type": "directory",
       "size": 0,
@@ -197,55 +67,29 @@
       ]
     },
     {
-      "name": "config_test.py",
-      "type": "file",
-      "size": 363,
-      "modified": "2025-03-22T22:10:58.639122",
-      "permissions": "666",
-      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\config_test.py"
-    },
-    {
-      "name": "converters",
-      "type": "directory",
-      "size": 0,
-      "modified": "2025-03-22T23:55:06.911093",
-      "permissions": "777",
-      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\converters",
-      "children": [
-        {
-          "name": "python_to_csharp.py",
-          "type": "file",
-          "size": 903,
-          "modified": "2025-03-22T23:55:15.467588",
-          "permissions": "666",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\converters\\python_to_csharp.py"
-        },
-        {
-          "name": "python_to_java.py",
-          "type": "file",
-          "size": 0,
-          "modified": "2025-03-22T23:55:06.911093",
-          "permissions": "666",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\converters\\python_to_java.py"
-        }
-      ]
-    },
-    {
       "name": "core",
       "type": "directory",
       "size": 4096,
-      "modified": "2025-03-23T00:04:15.516369",
+      "modified": "2025-03-23T00:27:52.949753",
       "permissions": "777",
       "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core",
       "children": [
         {
           "name": "analysis",
           "type": "directory",
-          "size": 0,
-          "modified": "2025-03-22T23:44:02.189588",
+          "size": 4096,
+          "modified": "2025-03-23T00:21:12.673105",
           "permissions": "777",
           "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\analysis",
           "children": [
+            {
+              "name": "adviser.py",
+              "type": "file",
+              "size": 1463,
+              "modified": "2025-03-23T00:21:20.694691",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\analysis\\adviser.py"
+            },
             {
               "name": "filter.py",
               "type": "file",
@@ -253,6 +97,14 @@
               "modified": "2025-03-22T23:11:54.176002",
               "permissions": "666",
               "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\analysis\\filter.py"
+            },
+            {
+              "name": "knowledge_graph.py",
+              "type": "file",
+              "size": 2126,
+              "modified": "2025-03-22T23:24:21.069201",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\analysis\\knowledge_graph.py"
             },
             {
               "name": "llm_utils.py",
@@ -271,6 +123,14 @@
               "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\analysis\\multilang_analyzer.py"
             },
             {
+              "name": "pattern_matcher.py",
+              "type": "file",
+              "size": 1258,
+              "modified": "2025-03-22T23:24:30.514067",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\analysis\\pattern_matcher.py"
+            },
+            {
               "name": "__init__.py",
               "type": "file",
               "size": 0,
@@ -283,8 +143,8 @@
         {
           "name": "automation",
           "type": "directory",
-          "size": 0,
-          "modified": "2025-03-22T22:49:08.077206",
+          "size": 4096,
+          "modified": "2025-03-23T00:24:51.794491",
           "permissions": "777",
           "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\automation",
           "children": [
@@ -315,10 +175,26 @@
             {
               "name": "scheduler.py",
               "type": "file",
-              "size": 5301,
-              "modified": "2025-03-22T21:37:46.643432",
+              "size": 5864,
+              "modified": "2025-03-23T00:21:58.541211",
               "permissions": "666",
               "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\automation\\scheduler.py"
+            },
+            {
+              "name": "security.py",
+              "type": "file",
+              "size": 700,
+              "modified": "2025-03-22T23:49:14.354297",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\automation\\security.py"
+            },
+            {
+              "name": "self_awareness.py",
+              "type": "file",
+              "size": 2670,
+              "modified": "2025-03-22T23:47:50.973839",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\automation\\self_awareness.py"
             }
           ]
         },
@@ -326,10 +202,73 @@
           "name": "bridges",
           "type": "directory",
           "size": 4096,
-          "modified": "2025-03-23T00:07:28.644300",
+          "modified": "2025-03-23T00:20:49.906207",
           "permissions": "777",
           "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges",
           "children": [
+            {
+              "name": "converters",
+              "type": "directory",
+              "size": 0,
+              "modified": "2025-03-22T23:55:06.911093",
+              "permissions": "777",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\converters",
+              "children": [
+                {
+                  "name": "python_to_csharp.py",
+                  "type": "file",
+                  "size": 903,
+                  "modified": "2025-03-22T23:55:15.467588",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\converters\\python_to_csharp.py"
+                },
+                {
+                  "name": "python_to_java.py",
+                  "type": "file",
+                  "size": 0,
+                  "modified": "2025-03-22T23:55:06.911093",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\converters\\python_to_java.py"
+                }
+              ]
+            },
+            {
+              "name": "csharp",
+              "type": "directory",
+              "size": 0,
+              "modified": "2025-03-23T00:05:08.949011",
+              "permissions": "777",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\csharp",
+              "children": [
+                {
+                  "name": "DatabaseService",
+                  "type": "directory",
+                  "size": 0,
+                  "modified": "2025-03-23T00:08:02.731706",
+                  "permissions": "777",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\csharp\\DatabaseService",
+                  "children": [
+                    {
+                      "name": "DataService.cs",
+                      "type": "file",
+                      "size": 1160,
+                      "modified": "2025-03-23T00:08:07.148950",
+                      "permissions": "666",
+                      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\csharp\\DatabaseService\\DataService.cs"
+                    }
+                  ]
+                },
+                {
+                  "name": "WindowsIntegration",
+                  "type": "directory",
+                  "size": 0,
+                  "modified": "2025-03-23T00:05:08.949011",
+                  "permissions": "777",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\csharp\\WindowsIntegration",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "csharp_analyzer.py",
               "type": "file",
@@ -337,6 +276,43 @@
               "modified": "2025-03-22T23:43:30.665523",
               "permissions": "666",
               "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\csharp_analyzer.py"
+            },
+            {
+              "name": "java",
+              "type": "directory",
+              "size": 0,
+              "modified": "2025-03-23T00:06:34.387157",
+              "permissions": "777",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\java",
+              "children": [
+                {
+                  "name": "NetworkManager",
+                  "type": "directory",
+                  "size": 0,
+                  "modified": "2025-03-23T00:05:28.301436",
+                  "permissions": "777",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\java\\NetworkManager",
+                  "children": []
+                },
+                {
+                  "name": "SecureTerminal",
+                  "type": "directory",
+                  "size": 0,
+                  "modified": "2025-03-23T00:06:12.365198",
+                  "permissions": "777",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\java\\SecureTerminal",
+                  "children": [
+                    {
+                      "name": "SecureShell.java",
+                      "type": "file",
+                      "size": 1182,
+                      "modified": "2025-03-23T00:21:23.535022",
+                      "permissions": "666",
+                      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\java\\SecureTerminal\\SecureShell.java"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "name": "java_analyzer.py",
@@ -353,6 +329,34 @@
               "modified": "2025-03-23T00:07:37.711373",
               "permissions": "666",
               "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\java_terminal.py"
+            },
+            {
+              "name": "js",
+              "type": "directory",
+              "size": 0,
+              "modified": "2025-03-23T00:09:10.702009",
+              "permissions": "777",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\js",
+              "children": [
+                {
+                  "name": "WebScrapper",
+                  "type": "directory",
+                  "size": 0,
+                  "modified": "2025-03-23T00:09:19.371342",
+                  "permissions": "777",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\js\\WebScrapper",
+                  "children": [
+                    {
+                      "name": "scrapper.js",
+                      "type": "file",
+                      "size": 799,
+                      "modified": "2025-03-23T00:09:23.897632",
+                      "permissions": "666",
+                      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\js\\WebScrapper\\scrapper.js"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "name": "lib",
@@ -415,48 +419,6 @@
               "modified": "2025-03-22T23:38:16.013658",
               "permissions": "666",
               "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\bridges\\__init__.py"
-            }
-          ]
-        },
-        {
-          "name": "cache",
-          "type": "directory",
-          "size": 4096,
-          "modified": "2025-03-22T23:00:38.383034",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\cache",
-          "children": [
-            {
-              "name": "file_cache.py",
-              "type": "file",
-              "size": 941,
-              "modified": "2025-03-22T23:01:15.908133",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\cache\\file_cache.py"
-            },
-            {
-              "name": "layered_cache.py",
-              "type": "file",
-              "size": 1230,
-              "modified": "2025-03-22T23:00:58.027485",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\cache\\layered_cache.py"
-            },
-            {
-              "name": "redis_adapter.py",
-              "type": "file",
-              "size": 656,
-              "modified": "2025-03-22T23:01:07.343764",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\cache\\redis_adapter.py"
-            },
-            {
-              "name": "__init__.py",
-              "type": "file",
-              "size": 0,
-              "modified": "2025-03-22T23:00:12.986395",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\cache\\__init__.py"
             }
           ]
         },
@@ -545,20 +507,20 @@
           ]
         },
         {
-          "name": "orchestration",
+          "name": "protos",
           "type": "directory",
           "size": 0,
-          "modified": "2025-03-22T23:13:57.929846",
+          "modified": "2025-03-23T00:08:46.189750",
           "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\orchestration",
+          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\protos",
           "children": [
             {
-              "name": "scheduler.py",
+              "name": "database.proto",
               "type": "file",
-              "size": 569,
-              "modified": "2025-03-22T23:14:03.207194",
+              "size": 289,
+              "modified": "2025-03-23T00:08:51.064743",
               "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\orchestration\\scheduler.py"
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\protos\\database.proto"
             }
           ]
         },
@@ -593,48 +555,6 @@
               "modified": "2025-03-22T22:19:33.248108",
               "permissions": "666",
               "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\queue\\__init__.py"
-            }
-          ]
-        },
-        {
-          "name": "recommendations",
-          "type": "directory",
-          "size": 4096,
-          "modified": "2025-03-22T23:23:57.057336",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\recommendations",
-          "children": [
-            {
-              "name": "adviser.py",
-              "type": "file",
-              "size": 1477,
-              "modified": "2025-03-22T23:24:38.485723",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\recommendations\\adviser.py"
-            },
-            {
-              "name": "knowledge_graph.py",
-              "type": "file",
-              "size": 2126,
-              "modified": "2025-03-22T23:24:21.069201",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\recommendations\\knowledge_graph.py"
-            },
-            {
-              "name": "pattern_matcher.py",
-              "type": "file",
-              "size": 1258,
-              "modified": "2025-03-22T23:24:30.514067",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\recommendations\\pattern_matcher.py"
-            },
-            {
-              "name": "__init__.py",
-              "type": "file",
-              "size": 0,
-              "modified": "2025-03-22T23:23:29.586263",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\recommendations\\__init__.py"
             }
           ]
         },
@@ -681,20 +601,171 @@
           ]
         },
         {
-          "name": "security.py",
-          "type": "file",
-          "size": 700,
-          "modified": "2025-03-22T23:49:14.354297",
-          "permissions": "666",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\security.py"
-        },
-        {
-          "name": "self_awareness.py",
-          "type": "file",
-          "size": 2670,
-          "modified": "2025-03-22T23:47:50.973839",
-          "permissions": "666",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\self_awareness.py"
+          "name": "storage",
+          "type": "directory",
+          "size": 0,
+          "modified": "2025-03-23T00:24:09.632345",
+          "permissions": "777",
+          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage",
+          "children": [
+            {
+              "name": "cache",
+              "type": "directory",
+              "size": 4096,
+              "modified": "2025-03-22T23:00:38.383034",
+              "permissions": "777",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\cache",
+              "children": [
+                {
+                  "name": "file_cache.py",
+                  "type": "file",
+                  "size": 941,
+                  "modified": "2025-03-22T23:01:15.908133",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\cache\\file_cache.py"
+                },
+                {
+                  "name": "layered_cache.py",
+                  "type": "file",
+                  "size": 1230,
+                  "modified": "2025-03-22T23:00:58.027485",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\cache\\layered_cache.py"
+                },
+                {
+                  "name": "redis_adapter.py",
+                  "type": "file",
+                  "size": 656,
+                  "modified": "2025-03-22T23:01:07.343764",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\cache\\redis_adapter.py"
+                },
+                {
+                  "name": "__init__.py",
+                  "type": "file",
+                  "size": 0,
+                  "modified": "2025-03-22T23:00:12.986395",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\cache\\__init__.py"
+                }
+              ]
+            },
+            {
+              "name": "qdrant_storage",
+              "type": "directory",
+              "size": 4096,
+              "modified": "2025-03-22T22:44:25.678985",
+              "permissions": "777",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\qdrant_storage",
+              "children": [
+                {
+                  "name": ".lock",
+                  "type": "file",
+                  "size": 13,
+                  "modified": "2025-03-22T22:39:47.614991",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\qdrant_storage\\.lock"
+                },
+                {
+                  "name": "collection",
+                  "type": "directory",
+                  "size": 0,
+                  "modified": "2025-03-22T22:42:55.067269",
+                  "permissions": "777",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\qdrant_storage\\collection",
+                  "children": [
+                    {
+                      "name": "code_search",
+                      "type": "directory",
+                      "size": 0,
+                      "modified": "2025-03-22T22:42:55.072295",
+                      "permissions": "777",
+                      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\qdrant_storage\\collection\\code_search",
+                      "children": [
+                        {
+                          "name": "storage.sqlite",
+                          "type": "file",
+                          "size": 12288,
+                          "modified": "2025-03-22T11:13:23.227903",
+                          "permissions": "666",
+                          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\qdrant_storage\\collection\\code_search\\storage.sqlite"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "meta.json",
+                  "type": "file",
+                  "size": 512,
+                  "modified": "2025-03-22T22:40:40.105779",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\qdrant_storage\\meta.json"
+                }
+              ]
+            },
+            {
+              "name": "vectordb",
+              "type": "directory",
+              "size": 0,
+              "modified": "2025-03-22T22:44:17.784156",
+              "permissions": "777",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\vectordb",
+              "children": [
+                {
+                  "name": "654ea884-d8e1-4a00-b486-39f325229ea9",
+                  "type": "directory",
+                  "size": 0,
+                  "modified": "2025-03-18T23:26:44.390293",
+                  "permissions": "777",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\vectordb\\654ea884-d8e1-4a00-b486-39f325229ea9",
+                  "children": []
+                },
+                {
+                  "name": "chroma.sqlite3",
+                  "type": "file",
+                  "size": 167936,
+                  "modified": "2025-03-22T22:39:34.461045",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\vectordb\\chroma.sqlite3"
+                }
+              ]
+            },
+            {
+              "name": "vector_db_py",
+              "type": "directory",
+              "size": 0,
+              "modified": "2025-03-22T22:36:08.983463",
+              "permissions": "777",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\vector_db_py",
+              "children": [
+                {
+                  "name": "embeddings.py",
+                  "type": "file",
+                  "size": 7444,
+                  "modified": "2025-03-22T22:36:55.212352",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\vector_db_py\\embeddings.py"
+                },
+                {
+                  "name": "qdrant_connector.py",
+                  "type": "file",
+                  "size": 4425,
+                  "modified": "2025-03-22T23:03:41.580199",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\vector_db_py\\qdrant_connector.py"
+                },
+                {
+                  "name": "semantic.py",
+                  "type": "file",
+                  "size": 6166,
+                  "modified": "2025-03-22T11:28:52.543954",
+                  "permissions": "666",
+                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\storage\\vector_db_py\\semantic.py"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "tuning",
@@ -711,6 +782,56 @@
               "modified": "2025-03-22T11:02:15.248815",
               "permissions": "666",
               "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\tuning\\fine_tuning.py"
+            }
+          ]
+        },
+        {
+          "name": "utils",
+          "type": "directory",
+          "size": 4096,
+          "modified": "2025-03-23T00:28:11.171236",
+          "permissions": "777",
+          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\utils",
+          "children": [
+            {
+              "name": "create_clean_text.py",
+              "type": "file",
+              "size": 976,
+              "modified": "2025-03-21T22:37:00.369431",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\utils\\create_clean_text.py"
+            },
+            {
+              "name": "directory_snapshot.json",
+              "type": "file",
+              "size": 60149,
+              "modified": "2025-03-23T00:14:50.161033",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\utils\\directory_snapshot.json"
+            },
+            {
+              "name": "directory_snapshot.py",
+              "type": "file",
+              "size": 3014,
+              "modified": "2025-03-23T00:54:07.977903",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\utils\\directory_snapshot.py"
+            },
+            {
+              "name": "massive_llm_prompt.txt",
+              "type": "file",
+              "size": 10045,
+              "modified": "2025-03-22T21:59:01.162107",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\utils\\massive_llm_prompt.txt"
+            },
+            {
+              "name": "py_to_txt.py",
+              "type": "file",
+              "size": 2217,
+              "modified": "2025-03-21T21:33:14.418632",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\utils\\py_to_txt.py"
             }
           ]
         },
@@ -747,40 +868,6 @@
               "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\vcs\\__init__.py"
             }
           ]
-        },
-        {
-          "name": "vector_db",
-          "type": "directory",
-          "size": 0,
-          "modified": "2025-03-22T22:36:08.983463",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\vector_db",
-          "children": [
-            {
-              "name": "embeddings.py",
-              "type": "file",
-              "size": 7444,
-              "modified": "2025-03-22T22:36:55.212352",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\vector_db\\embeddings.py"
-            },
-            {
-              "name": "qdrant_connector.py",
-              "type": "file",
-              "size": 4425,
-              "modified": "2025-03-22T23:03:41.580199",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\vector_db\\qdrant_connector.py"
-            },
-            {
-              "name": "semantic.py",
-              "type": "file",
-              "size": 6166,
-              "modified": "2025-03-22T11:28:52.543954",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\core\\vector_db\\semantic.py"
-            }
-          ]
         }
       ]
     },
@@ -788,244 +875,61 @@
       "name": "data",
       "type": "directory",
       "size": 4096,
-      "modified": "2025-03-22T22:45:27.062609",
+      "modified": "2025-03-23T00:25:19.957204",
       "permissions": "777",
       "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data",
       "children": [
         {
-          "name": "data",
-          "type": "directory",
-          "size": 4096,
-          "modified": "2025-03-22T22:45:27.062609",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\data",
-          "children": [
-            {
-              "name": "c#codebase.json",
-              "type": "file",
-              "size": 241,
-              "modified": "2025-03-18T21:55:19.792770",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\data\\c#codebase.json"
-            },
-            {
-              "name": "dotnet-csharp-language-reference.pdf",
-              "type": "file",
-              "size": 41040334,
-              "modified": "2025-03-18T22:16:18.958621",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\data\\dotnet-csharp-language-reference.pdf"
-            },
-            {
-              "name": "merged_code.txt.txt",
-              "type": "file",
-              "size": 40,
-              "modified": "2025-03-22T21:46:33.662194",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\data\\merged_code.txt.txt"
-            },
-            {
-              "name": "my_app",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-22T22:42:55.050212",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\data\\my_app",
-              "children": [
-                {
-                  "name": "main.txt.txt",
-                  "type": "file",
-                  "size": 34,
-                  "modified": "2025-03-22T21:46:06.711534",
-                  "permissions": "666",
-                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\data\\my_app\\main.txt.txt"
-                }
-              ]
-            }
-          ]
+          "name": "c#codebase.json",
+          "type": "file",
+          "size": 241,
+          "modified": "2025-03-18T21:55:19.792770",
+          "permissions": "666",
+          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\c#codebase.json"
         },
         {
-          "name": "storage",
+          "name": "dotnet-csharp-language-reference.pdf",
+          "type": "file",
+          "size": 41040334,
+          "modified": "2025-03-18T22:16:18.958621",
+          "permissions": "666",
+          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\dotnet-csharp-language-reference.pdf"
+        },
+        {
+          "name": "merged_code.txt",
+          "type": "file",
+          "size": 40,
+          "modified": "2025-03-22T21:46:33.662194",
+          "permissions": "666",
+          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\merged_code.txt"
+        },
+        {
+          "name": "my_app",
           "type": "directory",
           "size": 0,
-          "modified": "2025-03-22T22:45:00.009053",
+          "modified": "2025-03-23T00:25:27.310399",
           "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\storage",
+          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\my_app",
           "children": [
             {
-              "name": "qdrant_storage",
-              "type": "directory",
-              "size": 4096,
-              "modified": "2025-03-22T22:44:25.678985",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\storage\\qdrant_storage",
-              "children": [
-                {
-                  "name": ".lock",
-                  "type": "file",
-                  "size": 13,
-                  "modified": "2025-03-22T22:39:47.614991",
-                  "permissions": "666",
-                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\storage\\qdrant_storage\\.lock"
-                },
-                {
-                  "name": "collection",
-                  "type": "directory",
-                  "size": 0,
-                  "modified": "2025-03-22T22:42:55.067269",
-                  "permissions": "777",
-                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\storage\\qdrant_storage\\collection",
-                  "children": [
-                    {
-                      "name": "code_search",
-                      "type": "directory",
-                      "size": 0,
-                      "modified": "2025-03-22T22:42:55.072295",
-                      "permissions": "777",
-                      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\storage\\qdrant_storage\\collection\\code_search",
-                      "children": [
-                        {
-                          "name": "storage.sqlite",
-                          "type": "file",
-                          "size": 12288,
-                          "modified": "2025-03-22T11:13:23.227903",
-                          "permissions": "666",
-                          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\storage\\qdrant_storage\\collection\\code_search\\storage.sqlite"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "meta.json",
-                  "type": "file",
-                  "size": 512,
-                  "modified": "2025-03-22T22:40:40.105779",
-                  "permissions": "666",
-                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\storage\\qdrant_storage\\meta.json"
-                }
-              ]
-            },
-            {
-              "name": "vectordb",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-22T22:44:17.784156",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\storage\\vectordb",
-              "children": [
-                {
-                  "name": "654ea884-d8e1-4a00-b486-39f325229ea9",
-                  "type": "directory",
-                  "size": 0,
-                  "modified": "2025-03-18T23:26:44.390293",
-                  "permissions": "777",
-                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\storage\\vectordb\\654ea884-d8e1-4a00-b486-39f325229ea9",
-                  "children": []
-                },
-                {
-                  "name": "chroma.sqlite3",
-                  "type": "file",
-                  "size": 167936,
-                  "modified": "2025-03-22T22:39:34.461045",
-                  "permissions": "666",
-                  "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\storage\\vectordb\\chroma.sqlite3"
-                }
-              ]
+              "name": "main.txt",
+              "type": "file",
+              "size": 34,
+              "modified": "2025-03-22T21:46:06.711534",
+              "permissions": "666",
+              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\data\\my_app\\main.txt"
             }
           ]
         }
       ]
-    },
-    {
-      "name": "directory_snapshot.py",
-      "type": "file",
-      "size": 3014,
-      "modified": "2025-03-23T00:14:29.573879",
-      "permissions": "666",
-      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\directory_snapshot.py"
-    },
-    {
-      "name": "docker-compose.monitoring.yml",
-      "type": "file",
-      "size": 333,
-      "modified": "2025-03-22T22:57:02.441023",
-      "permissions": "666",
-      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\docker-compose.monitoring.yml"
     },
     {
       "name": "docker-compose.yml",
       "type": "file",
-      "size": 226,
-      "modified": "2025-03-22T22:37:10.972073",
+      "size": 1238,
+      "modified": "2025-03-23T00:52:00.353595",
       "permissions": "666",
       "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\docker-compose.yml"
-    },
-    {
-      "name": "examples",
-      "type": "directory",
-      "size": 0,
-      "modified": "2025-03-22T23:52:56.334554",
-      "permissions": "777",
-      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\examples",
-      "children": [
-        {
-          "name": "csharp",
-          "type": "directory",
-          "size": 0,
-          "modified": "2025-03-22T23:53:09.531816",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\examples\\csharp",
-          "children": [
-            {
-              "name": "basics",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-22T23:53:05.144793",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\examples\\csharp\\basics",
-              "children": []
-            },
-            {
-              "name": "oop",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-22T23:53:09.531816",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\examples\\csharp\\oop",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "java",
-          "type": "directory",
-          "size": 0,
-          "modified": "2025-03-22T23:53:29.458510",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\examples\\java",
-          "children": [
-            {
-              "name": "collections",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-22T23:53:16.978655",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\examples\\java\\collections",
-              "children": []
-            },
-            {
-              "name": "multithreading",
-              "type": "directory",
-              "size": 0,
-              "modified": "2025-03-22T23:53:29.458510",
-              "permissions": "777",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\examples\\java\\multithreading",
-              "children": []
-            }
-          ]
-        }
-      ]
     },
     {
       "name": "exercises",
@@ -1252,12 +1156,12 @@
       "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\prometheus.yml"
     },
     {
-      "name": "README",
+      "name": "README.md",
       "type": "file",
-      "size": 5192,
-      "modified": "2025-03-23T00:11:34.096664",
+      "size": 8626,
+      "modified": "2025-03-23T00:52:50.087114",
       "permissions": "666",
-      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\README"
+      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\README.md"
     },
     {
       "name": "requirements.txt",
@@ -1302,52 +1206,6 @@
       "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\setup.py"
     },
     {
-      "name": "src",
-      "type": "directory",
-      "size": 0,
-      "modified": "2025-03-22T23:40:22.598285",
-      "permissions": "777",
-      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\src",
-      "children": [
-        {
-          "name": "csharp",
-          "type": "directory",
-          "size": 0,
-          "modified": "2025-03-22T23:40:36.301131",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\src\\csharp",
-          "children": [
-            {
-              "name": "MyProject.sln",
-              "type": "file",
-              "size": 0,
-              "modified": "2025-03-22T23:40:36.301131",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\src\\csharp\\MyProject.sln"
-            }
-          ]
-        },
-        {
-          "name": "java",
-          "type": "directory",
-          "size": 0,
-          "modified": "2025-03-22T23:40:47.306331",
-          "permissions": "777",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\src\\java",
-          "children": [
-            {
-              "name": "pom.xml",
-              "type": "file",
-              "size": 0,
-              "modified": "2025-03-22T23:40:47.306331",
-              "permissions": "666",
-              "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\src\\java\\pom.xml"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "tasks",
       "type": "directory",
       "size": 0,
@@ -1369,10 +1227,18 @@
       "name": "tests",
       "type": "directory",
       "size": 4096,
-      "modified": "2025-03-22T23:41:05.851242",
+      "modified": "2025-03-23T00:26:56.253101",
       "permissions": "777",
       "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\tests",
       "children": [
+        {
+          "name": "config_test.py",
+          "type": "file",
+          "size": 363,
+          "modified": "2025-03-22T22:10:58.639122",
+          "permissions": "666",
+          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\tests\\config_test.py"
+        },
         {
           "name": "test_basic_setup.py",
           "type": "file",
@@ -1496,66 +1362,6 @@
           "modified": "2025-03-22T22:37:17.523200",
           "permissions": "666",
           "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\tests\\test_vector_search.py"
-        }
-      ]
-    },
-    {
-      "name": "tools",
-      "type": "directory",
-      "size": 4096,
-      "modified": "2025-03-23T00:14:11.476472",
-      "permissions": "777",
-      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\tools",
-      "children": [
-        {
-          "name": "create_clean_text.py",
-          "type": "file",
-          "size": 976,
-          "modified": "2025-03-21T22:37:00.369431",
-          "permissions": "666",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\tools\\create_clean_text.py"
-        },
-        {
-          "name": "massive_llm_prompt.txt",
-          "type": "file",
-          "size": 10045,
-          "modified": "2025-03-22T21:59:01.162107",
-          "permissions": "666",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\tools\\massive_llm_prompt.txt"
-        },
-        {
-          "name": "py_to_txt.py",
-          "type": "file",
-          "size": 2217,
-          "modified": "2025-03-21T21:33:14.418632",
-          "permissions": "666",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\tools\\py_to_txt.py"
-        }
-      ]
-    },
-    {
-      "name": "visualizers",
-      "type": "directory",
-      "size": 0,
-      "modified": "2025-03-22T23:56:51.415392",
-      "permissions": "777",
-      "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\visualizers",
-      "children": [
-        {
-          "name": "csharp_visualizer.py",
-          "type": "file",
-          "size": 0,
-          "modified": "2025-03-22T23:56:41.465816",
-          "permissions": "666",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\visualizers\\csharp_visualizer.py"
-        },
-        {
-          "name": "java_visualizer.py",
-          "type": "file",
-          "size": 721,
-          "modified": "2025-03-22T23:56:58.134762",
-          "permissions": "666",
-          "absolute_path": "C:\\Users\\korda\\YandexDisk\\steelf\\code_assistant\\visualizers\\java_visualizer.py"
         }
       ]
     }

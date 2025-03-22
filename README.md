@@ -32,7 +32,7 @@ sudo -u postgres psql -c "CREATE USER codebot WITH PASSWORD 'securepass';"
 
 # Redis & Qdrant Services
 docker-compose up -d  # Core services
-docker-compose -f docker-compose.monitoring.yml up -d  # Monitoring stack
+docker-compose down
 ```
 
 ### 3. System Initialization

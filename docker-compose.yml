@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  # Основные сервисы
   qdrant:
     image: qdrant/qdrant
     restart: unless-stopped
@@ -9,6 +10,52 @@ services:
       - "6334:6334"
     volumes:
       - qdrant_data:/qdrant/storage
+    networks:
+      - code-net
+
+  redis:
+    image: redis:alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - code-net
+
+  # Система мониторинга
+  prometheus:
+    image: prom/prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - code-net
+
+  grafana:
+    image: grafana/grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./monitoring/dashboards:/var/lib/grafana/dashboards
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-secret}
+    depends_on:
+      - prometheus
+    networks:
+      - code-net
 
 volumes:
   qdrant_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  code-net:
+    driver: bridge

@@ -7,7 +7,7 @@ from telegram.ext import (
     filters,
     CallbackQueryHandler
 )
-from core.queue.priority_queue import PriorityAnalysisQueue
+from core.automation.priority_queue import PriorityAnalysisQueue
 from core.vector_db.qdrant_connector import VectorSearchEngine
 
 from telegram.ext import Defaults, ExtBot

@@ -30,7 +30,7 @@ from core.cache import (
     CompressedCache
 )
 from core.analysis import FileFilter, chunk_content
-from core.queue import PriorityAnalysisQueue
+from core.automation import PriorityAnalysisQueue
 from core.vector_db import VectorSearchEngine
 from core.database import init_db, get_session, FileMetadata, SemanticType
 from interfaces.telegram import CodeAssistantBot
