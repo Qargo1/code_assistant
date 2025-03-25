@@ -1,82 +1,146 @@
+"""
+Модуль фильтрации файлов на основе их релевантности к запросу.
+"""
+
 import json
-from pathlib import Path
-from transformers import pipeline
-from typing import Dict, Any
 import logging
-from core.database.models import FileMetadata
-from core.database.connection import get_session
+import os
+from pathlib import Path
+from typing import Dict, Any, List, Optional
 
 logger = logging.getLogger(__name__)
 
 class FileFilter:
-    def __init__(self, model_name="google/flan-t5-base"):
-        self.classifier = pipeline(
-            "text2text-generation",
-            model=model_name,
-            device=0 if torch.cuda.is_available() else -1
-        )
+    """
+    Класс для фильтрации файлов по их релевантности к запросу.
+    Позволяет определить, какие файлы имеет смысл анализировать
+    для конкретного запроса пользователя.
+    """
+    
+    def __init__(self):
+        """Инициализация фильтра файлов"""
         self.cache = {}
+        self.ignored_extensions = {'.jpg', '.png', '.gif', '.dll', '.pdb', '.zip', '.exe', '.bin'}
         
-        # Загрузка промпта
-        with open("models/config/filter_prompt.json") as f:
-            self.prompt_template = json.load(f)["prompt"]
-
-    def _generate_prompt(self, file_content: str, question: str) -> str:
-        return self.prompt_template.format(
-            file_content=file_content[:2000],  # Ограничение контекста
-            question=question
-        )
-
+        # Определяем расширения для разных языков
+        self.csharp_extensions = {'.cs', '.csx'}
+        self.java_extensions = {'.java'}
+        self.javascript_extensions = {'.js', '.jsx', '.ts', '.tsx'}
+        
+        logger.info("FileFilter initialized")
+    
     def check_relevance(self, file_path: Path, question: str) -> Dict[str, Any]:
-        """Основной метод проверки релевантности файла"""
-        try:
-            if self._file_changed_since_last_analysis(file_path):
-                self._force_reanalysis(file_path)
-            # Проверка кэша
-            cache_key = f"{file_path}-{question}"
-            if cache_key in self.cache:
-                return self.cache[cache_key]
-
-            # Чтение файла
-            content = file_path.read_text(encoding='utf-8', errors='ignore')
+        """
+        Проверка релевантности файла к запросу.
+        
+        Args:
+            file_path: Путь к файлу для проверки
+            question: Текст запроса пользователя
             
-            # Генерация промпта
-            prompt = self._generate_prompt(content, question)
+        Returns:
+            Словарь с информацией о релевантности
+        """
+        # Преобразование в Path, если передана строка
+        if isinstance(file_path, str):
+            file_path = Path(file_path)
             
-            # Выполнение запроса к LLM
-            result = self.classifier(
-                prompt,
-                max_length=200,
-                num_return_sequences=1,
-                temperature=0.3
-            )
+        # Проверка расширения
+        if file_path.suffix.lower() in self.ignored_extensions:
+            return {"relevance": 0.0, "reason": "Ignored file extension"}
+        
+        # Базовая заглушка реализации
+        # В реальной системе здесь будет сложная логика
+        # с использованием эмбеддингов и семантического поиска
+        return {
+            "relevance": 0.8,  # Просто высокий вес по умолчанию
+            "reason": "Stub implementation"
+        }
+    
+    def _perform_analysis(self, file_path: Path, question: str) -> Dict:
+        """
+        Внутренний метод для анализа файла и определения его релевантности.
+        В реальной системе будет использовать векторную близость между
+        содержимым файла и запросом.
+        
+        Args:
+            file_path: Путь к файлу
+            question: Текст запроса
             
-            # Парсинг результата
-            response = json.loads(result[0]['generated_text'])
+        Returns:
+            Словарь с результатами анализа
+        """
+        # Это заглушка для метода
+        # В реальной системе здесь будет сложный анализ
+        return {
+            "relevance": 0.8,
+            "file_path": str(file_path),
+            "question": question
+        }
+        
+    def is_csharp_file(self, file_path: str) -> bool:
+        """
+        Проверяет, является ли файл C# кодом.
+        
+        Args:
+            file_path: Путь к файлу для проверки
             
-            # Обновление метаданных в БД
-            self._update_metadata(file_path, response)
+        Returns:
+            True, если файл содержит C# код, иначе False
+        """
+        if isinstance(file_path, Path):
+            file_path = str(file_path)
             
-            # Кэширование
-            self.cache[cache_key] = response
-            return response
+        _, ext = os.path.splitext(file_path.lower())
+        return ext in self.csharp_extensions
+        
+    def is_java_file(self, file_path: str) -> bool:
+        """
+        Проверяет, является ли файл Java кодом.
+        
+        Args:
+            file_path: Путь к файлу для проверки
             
-        except Exception as e:
-            logger.error(f"Error processing {file_path}: {str(e)}")
-            return {"relevant": False, "confidence": 0.0, "error": str(e)}
-
-    def _update_metadata(self, file_path: Path, response: dict):
-        """Обновление метаданных файла в базе"""
-        with get_session() as session:
-            file_meta = session.query(FileMetadata).filter_by(
-                file_path=str(file_path)
-            ).first()
+        Returns:
+            True, если файл содержит Java код, иначе False
+        """
+        if isinstance(file_path, Path):
+            file_path = str(file_path)
             
-            if file_meta:
-                file_meta.last_analyzed = datetime.now()
-                file_meta.key_functions = response.get("keywords", [])
-                session.commit()
-
-    def batch_filter(self, files: list, question: str) -> list:
-        """Пакетная обработка файлов"""
-        return [self.check_relevance(Path(f), question) for f in files]
+        _, ext = os.path.splitext(file_path.lower())
+        return ext in self.java_extensions
+        
+    def is_javascript_file(self, file_path: str) -> bool:
+        """
+        Проверяет, является ли файл JavaScript/TypeScript кодом.
+        
+        Args:
+            file_path: Путь к файлу для проверки
+            
+        Returns:
+            True, если файл содержит JavaScript/TypeScript код, иначе False
+        """
+        if isinstance(file_path, Path):
+            file_path = str(file_path)
+            
+        _, ext = os.path.splitext(file_path.lower())
+        return ext in self.javascript_extensions
+        
+    def filter_by_language(self, files: List[str], language: str) -> List[str]:
+        """
+        Фильтрует список файлов по указанному языку.
+        
+        Args:
+            files: Список путей к файлам
+            language: Язык для фильтрации ('csharp', 'java', 'javascript')
+            
+        Returns:
+            Отфильтрованный список файлов
+        """
+        if language == 'csharp':
+            return [f for f in files if self.is_csharp_file(f)]
+        elif language == 'java':
+            return [f for f in files if self.is_java_file(f)]
+        elif language == 'javascript':
+            return [f for f in files if self.is_javascript_file(f)]
+        else:
+            return files  # Если язык не определен, возвращаем все файлы

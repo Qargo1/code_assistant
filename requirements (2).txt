@@ -1,0 +1,49 @@
+# Core dependencies
+psycopg2-binary
+faiss-cpu
+sentence-transformers
+tree-sitter
+qdrant-client
+ollama
+
+# Language bridges
+pythonnet
+JPype1
+
+# Automation and monitoring
+APScheduler
+watchdog
+gitpython
+psutil
+
+# Web and communication
+python-telegram-bot
+requests
+networkx
+matplotlib
+
+# Others
+pyyaml
+sqlalchemy
+redis
+rq
+torch
+transformers
+python-memcached
+GitPython
+libcst
+radon
+networkx
+spacy
+python-igraph
+langchain 
+openai 
+google
+docker 
+javalang 
+anytree 
+tree-sitter
+
+
+# main
+pytest

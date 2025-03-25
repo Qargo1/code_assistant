@@ -1,11 +1,15 @@
 __pycache__
+.pytest_cache
 .venv
+.venv_new
 .vscode
+.self
 data/
 tools/
 .cache
 logs
 obj/
+vectordb/
 
 core/storage/qdrant_storage
 core/storage/vectordb
